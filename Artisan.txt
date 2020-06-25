@@ -1,0 +1,7 @@
+php artisan migrate:fresh (Rrefresca la migracion)
+php artisan make:migration create_professions_table (Crea migracion)
+php artisan make:model Sumo -mcr (Crea modelo, migracion y controlador)
+php artisan key:generate (Crea un id en el env)
+php artisan make:auth (Crea login e interfaz de login).
+php artisan make:model 
+php artisan make:controller nombre-controlador -r

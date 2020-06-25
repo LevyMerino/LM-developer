@@ -1,0 +1,10 @@
+git clone git://github.com/schacon/grit.git
+git clone git://github.com/schacon/grit.git mygrit
+git checkout master (Regresar de una rama a master)
+git checkout -b "nombre_rama" (Crear una nueva rama)
+------------------------------------------------------
+(Hacer commit)
+git add . 
+git commit -m "titulo"
+git push
+------------------------------------------------------

@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <div id ="demo">
+      <p>some text</p>
+      <p>some other text</p>
+    </div>
+
+    <script>
+     var a = document.getElementById("demo");
+     var arr = a.childNodes;
+     for(var x=0;x<arr.length;x++) {
+       arr[x].innerHTML = "new text"; // Los parrafos cambian a newtext
+     }
+    </script>
+
+  </body>
+</html>
+
+<!-- 
+element.childNodes devuelve una matriz de nodos secundarios de un elemento.
+element.firstChild devuelve el primer nodo hijo de un elemento.
+element.lastChild devuelve el último nodo secundario de un elemento.
+element.hasChildNodes devuelve verdadero si un elemento tiene nodos secundarios, de lo contrario falso.
+element.nextSibling devuelve el siguiente nodo en el mismo nivel de árbol.
+element.previousSibling devuelve el nodo anterior en el mismo nivel de árbol.
+element.parentNode devuelve el nodo padre de un elemento.
+ -->

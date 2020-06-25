@@ -1,0 +1,16 @@
+<script>
+    function myAlert() {
+    alert("Hi");
+    }
+    setInterval(myAlert, 3000);
+</script>
+<script>
+    function printTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    document.body.innerHTML = hours+":"+mins+":"+secs;
+    }
+    setIntervale(printTime, 1000);
+</script>

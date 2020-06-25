@@ -1,0 +1,18 @@
+<script>
+    let prop = 'name';
+    let id = '1234';
+    let mobile = '08923';
+
+    let user = {
+    [prop]: 'Jack',
+    [`user_${id}`]: `${mobile}`
+    };
+</script>
+<script>
+    var i = 0;
+    var a = {
+    ['foo' + ++i]: i,
+    ['foo' + ++i]: i,
+    ['foo' + ++i]: i
+    };
+</script>

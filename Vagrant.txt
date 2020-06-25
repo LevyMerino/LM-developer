@@ -1,0 +1,5 @@
+Vagrant up () 
+Vagrant reload --provision (Volver a leer las modificaciones) 
+Entra a consola del contenedor app para ejecutar todos los comandos laravel y npm que necesites
+vagrant@docker-host:/vagrant$ docker exec -it $(docker-compose ps -q app) bash
+vagrant ssh (Conexion con la maquina virtual)

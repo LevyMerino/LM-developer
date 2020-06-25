@@ -1,0 +1,4 @@
+npm install 
+npm -v
+node -v
+npm run watch (Webpack revisa los cambios de los archivos de JS)

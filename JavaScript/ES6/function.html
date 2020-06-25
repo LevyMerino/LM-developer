@@ -1,0 +1,30 @@
+<!-- Antes escrita como
+  function add(x, y) {
+  var sum = x+y;  
+  console.log(sum);
+} -->
+<script>
+    const add = (x, y) => {
+    let sum = x + y;  
+    console.log(sum);
+    }
+</script>
+
+<!-- 
+Esta nueva sintaxis es bastante
+ útil cuando solo necesita una función simple con un argumento.
+Puede omitir la función de escritura y regresar, así como algunos 
+paréntesis y llaves. -->
+
+<script>
+    const greet = x => "Welcome " + x;
+</script>
+
+<!-- El código anterior define una función llamada saludar 
+    que tiene un argumento y devuelve un mensaje.
+    Si no hay parámetros, se debe usar un par de paréntesis vacío
+    -->
+<script>
+    const x = () => alert("Hi");
+</script>
+

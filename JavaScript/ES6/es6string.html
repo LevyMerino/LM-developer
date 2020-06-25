@@ -1,0 +1,23 @@
+<!-- ES6 presenta una nueva forma de generar valores 
+     variables en cadenas. 
+    El mismo código anterior puede reescribirse como: -->
+
+    <script>
+        let name = 'David';
+        let msg = `Welcome ${name}!`;
+        console.log(msg);
+    </script>
+
+    <!-- Tenga en cuenta que los literales de plantilla están 
+        encerrados por el carácter de retroceso (``) en lugar 
+        de comillas dobles o simples.
+        $ {Expression} es un marcador de posición y puede incluir 
+        cualquier expresión, que se evaluará e insertará en la 
+        plantilla literal. -->
+
+        <script>
+            let a = 8;
+            let b = 34;
+            let msg = `The sum is ${a+b}`;
+            console.log(msg);
+        </script>

@@ -1,0 +1,2 @@
+app. (Cambiar valor de una variable desde consola)
+clear() (Borrar consola)

@@ -1,0 +1,13 @@
+docker ps (Ver contenedores activos)
+docker-compose up (Inicia todos los servicios)
+# Entrar a contenedor en ejecución
+docker exec -it <container_id> bash
+# Ejecutar contenedor entrando a consola
+docker-compose run --service-ports app bash
+# Detener todo el ambiente (sin borrar nada)
+docker-compose stop
+# Destruir todo el ambiente (borrando volúmenes)
+docker-compose down
+# Reconstruir imágenes docker
+docker-compose build
+

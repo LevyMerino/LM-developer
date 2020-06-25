@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            p.serif {
+                /* La propiedad de familia de fuentes debe contener varios 
+                nombres de fuentes como un sistema "alternativo". 
+                Al especificar una fuente web en un estilo CSS, agregue
+                más de un nombre de fuente, para evitar comportamientos 
+                inesperados. Si la computadora cliente por alguna razón 
+                no tiene la que usted elige, intentará con la siguiente.
+                Es una buena práctica especificar una familia de fuentes 
+                genéricas, para permitir que el navegador elija una fuente 
+                similar en la familia genérica, si no hay otras fuentes 
+                disponibles. */
+            font-family: "Times New Roman", Times, serif;
+            /* Se escribe entre comillas cuando es mas de una palabra */
+            } 
+            p.sansserif {
+            font-family: Helvetica, Arial, sans-serif;
+            }
+            p.monospace {
+            font-family: "Courier New", Courier, monospace;
+            }
+            p.cursive {
+            font-family: Florence, cursive;
+            }
+            p.fantasy {
+            font-family: Blippo, fantasy;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="serif">
+            This is a paragraph shown in serif font.
+        </p>
+        <p class="sansserif">
+        This is a paragraph shown in sans-serif font.
+        </p> 
+        <p class="monospace">
+        This is a paragraph shown in monospace font.
+        </p> 
+        <p class="cursive">
+        This is a paragraph shown in cursive font.
+        </p> 
+        <p class="fantasy">
+        This is a paragraph shown in fantasy font.
+        </p> 
+    </body>
+</html>

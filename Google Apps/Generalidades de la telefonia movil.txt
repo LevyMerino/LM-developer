@@ -1,0 +1,25 @@
+Genracion de telefonia movil 
+
+0G
+Siglo 19 Basada en radio ay&t 
+1G 1980 
+Analogica 
+Motorola Primer dispositivo 
+Estandar MNT
+2G
+1990
+Canal de comunacion extremo a extremo 
+SMS
+SMS multimedia
+Primer servicio  
+3G 
+Basada en paquetes de transmision
+Japon
+4G
+Paqutes
+Mayores tasas de transmision
+WiMaX LTE LTEA
+5G
+Tasas de tranferencia de 10 Mbits/segundo
+100.000 dispositvos simultaneos
+Escalabilidad
