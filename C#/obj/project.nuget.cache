@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nt5Vdblgr2mkA9p7vAtnSEXKA1uD8/TG2SGe18kpo504LVAGFrBbLnowHgyYN6yqm8kh0GBZK4ChAqydnl36cg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\merin\\Documents\\LM-Developer\\C#\\C#.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\merin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}

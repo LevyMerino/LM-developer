@@ -20,6 +20,7 @@ class Person
 static void Main(string[] args)
  {
   Person p = new Person("David");
+  p.nm("Juan");
   Console.WriteLine(p.getName());
 }
 //Outputs "David"

@@ -1,0 +1,43 @@
+<!-- 
+ React se puede agregar a un sitio web sin herramientas e 
+ instalaciones especiales.
+Primero, necesitamos agregar la biblioteca React como dos 
+etiquetas de script al encabezado de nuestro documento HTML:   
+ -->
+
+ <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> 
+
+ <!-- 
+     
+A continuación, necesitamos agregar otro script para habilitar el uso de JSX.
+JSX es una extensión de sintaxis de JavaScript y se recomienda su uso con React.
+No se preocupe, aprenderemos más sobre JSX en las próximas lecciones. Por ahora, 
+agreguemos la siguiente etiqueta de secuencia de comandos
+  -->
+
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+
+  <!-- 
+Este enfoque de agregar React a un sitio web solo es adecuado para crear 
+pequeñas demostraciones.
+Aprenderemos cómo crear un proyecto real listo para la producción en la
+ siguiente lección. -->
+
+ <div id="container"></div>
+
+ <!-- Puede usar cualquier identificación para su contenedor. 
+  React lo utilizará para encontrar el contenedor y agregarle contenido. -->
+
+  <script type="text/babel">
+    ReactDOM.render(
+      <h1>Hello, React!</h1>,
+      document.getElementById('container')
+    ) 
+    </script>
+
+
+
+<!-- El código encuentra el div contenedor y le agrega el encabezado h1.
+Toque Pruébelo usted mismo para explorar todo el código y ver React en acción. -->
