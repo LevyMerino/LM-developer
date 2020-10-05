@@ -13,4 +13,23 @@ git push
 git checkout master (Regresar de una rama a master)
 git checkout -b "nombre_rama" (Crear una nueva rama)
 
+Switched to branch 'master' (Ramas que se van a fusionar)
+$ git merge Rama-a-fusionar
+
+git branch -d hotfix (Borrar Ramas)
+
+--->> Conflictos con Ramas
+
+$ git merge iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git status
+
+git add
+
+git mergetool (Herramienta grafica)
+
+
 git log (Varios commit)
