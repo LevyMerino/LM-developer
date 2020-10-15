@@ -1,0 +1,154 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using DelatamServices.Data;
+using DelatamServices.Models;
+
+namespace DelatamServices.Controllers
+{
+    [Route("factura")]
+    [ApiController]
+    public class FacturaController : ControllerBase
+    {
+        private readonly DelatamServicesContext _context;
+
+        public FacturaController(DelatamServicesContext context)
+        {
+            _context = context;
+        }
+
+        // GET: api/dbEmisor
+        [HttpGet("get/{format}"), FormatFilter]
+        public async Task<ActionResult<IEnumerable<Cat_Emisor>>> GetEmisor()
+        {
+            return await _context.Cat_Emisor.ToListAsync();
+        }
+
+        // GET: api/dbEmisor/5
+        [HttpGet("{id}/get/{format}"), FormatFilter]
+        public async Task<ActionResult<Cat_Emisor>> GetEmisor(int id)
+        {
+            var emisor = await _context.Cat_Emisor.FindAsync(id);
+
+            if (emisor == null)
+            {
+                return NotFound();
+            }
+
+            return emisor;
+        }
+
+        // PUT: api/dbEmisor/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}/update/{format}"), FormatFilter]
+        public async Task<IActionResult> PutEmisor(int id, Cat_Emisor oEmisor)
+        {
+            if (id != oEmisor.eId)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(oEmisor).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EmisorExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/dbEmisor
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPost("post/{format}"), FormatFilter]
+        //[HttpPost]
+        public async Task<ActionResult<Cat_Emisor>> PostEmisor(Cat_Emisor oEmisor, Cat_Receptor oReceptor)
+        {
+            _context.Cat_Emisor.Add(oEmisor);
+            _context.Cat_ReceptorContext.Add(oReceptor);
+            await _context.SaveChangesAsync();
+
+            return oEmisor;
+        }
+
+        // DELETE: api/dbEmisor/5
+        [HttpDelete("{id}/delete/{format}"), FormatFilter]
+        public async Task<ActionResult<Cat_Emisor>> DeleteEmisor(int id)
+        {
+            var emisor = await _context.Cat_Emisor.FindAsync(id);
+            if (emisor == null)
+            {
+                return NotFound();
+            }
+
+            _context.Cat_Emisor.Remove(emisor);
+            await _context.SaveChangesAsync();
+
+            return emisor;
+        }
+
+        private bool EmisorExists(int id)
+        {
+            return _context.Cat_Emisor.Any(e => e.eId == id);
+        }
+    }
+}
+
+
+Scaffold-DbContext "Server=DESKTOP-BAAL7JR\SQLEXPRESS;Database=CfdiMX;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+
+Scaffold-DbContext "Server=DESKTOP-BAAL7JR\SQLEXPRESS;Database=CfdiMX;Trusted_Connection=True;"  
+     -Provider Microsoft.EntityFrameworkCore.SqlServer 
+     -OutputDir Models -Context ServiceContext 
+     -Tables Cat_Emisor,Cat_Conceptos -Force
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using WebCoreMx.Models;
+
+namespace WebCoreMx.Controllers
+{
+    [ApiController]
+    [Route("cfdi/f")]
+    public class FacturaAutomatica : ControllerBase
+    {
+
+
+
+        [HttpGet]
+        public IEnumerable<CatReceptor> Get()
+        {
+            using (var context = new CfdiMXContext())
+            {
+                return context.CatReceptor.ToList();
+
+            }
+        }
+    }
+}
