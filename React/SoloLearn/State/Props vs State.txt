@@ -1,0 +1,9 @@
+Props vs Estado
+
+Como resumen, aquí hay un resumen de las principales diferencias entre los accesorios y el estado:
+
+- Usamos accesorios para pasar datos a componentes.
+- Los componentes usan el estado para administrar sus datos.
+- Los accesorios son de solo lectura y no se pueden modificar.
+- El estado puede ser modificado por su componente usando el método setState ().
+- El método setState () da como resultado volver a renderizar el componente afectado.
